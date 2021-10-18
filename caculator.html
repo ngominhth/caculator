@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	
+	<title></title>
+	<link rel="stylesheet" href="">
+	<script>
+		function clickCong()
+		{
+			
+			let nhap_a= document.getElementById("nhap_a").value;
+			let nhap_b= document.getElementById("nhap_b").value;
+            let tong= parseInt(nhap_a)+ parseInt(nhap_b);
+            document.getElementById("ket_qua").innerHTML="Kết quả "+tong;
+
+		}
+		function clickTru()
+		{
+			
+			let nhap_a= document.getElementById("nhap_a").value;
+			let nhap_b= document.getElementById("nhap_b").value;
+            let pheptru= nhap_a - nhap_b;
+            document.getElementById("ket_qua").innerHTML="Kết quả "+pheptru;
+
+		}
+		function clickNhan()
+		{
+			let nhap_a= document.getElementById("nhap_a").value;
+			let nhap_b= document.getElementById("nhap_b").value;
+            let phepNhan= nhap_a * nhap_b;
+            document.getElementById("ket_qua").innerHTML="Kết quả "+phepNhan;
+		}
+		function clickChia()
+		{
+			let nhap_a= document.getElementById("nhap_a").value;
+			let nhap_b= document.getElementById("nhap_b").value;
+            let phepChia= nhap_a / nhap_b;
+            document.getElementById("ket_qua").innerHTML="Kết quả "+phepChia;
+		}
+	</script>
+</head>
+<body>
+<form action="" method="post">
+	
+
+<table>
+	<caption>Caculator</caption>
+	
+	<tbody>
+		<tr>
+			<td><input type="text" id="nhap_a"></td>
+			<td><input type="text" id="nhap_b"></td>
+		</tr>
+		<tr><td><input size="10" type="button" onclick="clickCong();" id="cong" value="Cộng">
+		<input size="10" type="button" id="tru" onclick="clickTru();" value="Trừ" name="tru">
+	    <input size="10" type="button" id="nhan" onclick="clickNhan()" value="Nhân" name="">
+	    	<input size="10" type="button" id="chia" onclick="clickChia()" value="Chia" name=""></td></tr>
+	    <tr><td><p id="ket_qua"></td></tr>	
+	</tbody>
+</table>
+</form>	
+</body>
+</html>
